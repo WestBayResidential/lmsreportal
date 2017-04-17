@@ -54,6 +54,21 @@ return [
             'engine' => null,
         ],
 
+        'mysql_mdl' => [
+            'driver' => 'mysql',
+            'host' => env('MDL_DB_HOST', '127.0.0.1'),
+            'port' => env('MDL_DB_PORT', '3306'),
+            'database' => env('MDL_DB_DATABASE', 'moodle26'),
+            'username' => env('MDL_DB_USERNAME', 'root'),
+            'password' => env('MDL_DB_PASSWORD', 'N3div999!'),
+            'unix_socket' => env('MDL_DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => 'mdl_',
+            'strict' => true,
+            'engine' => null,
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
