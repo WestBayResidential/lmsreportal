@@ -21,3 +21,5 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/certificates', 'CertificatesController@index')->name('certificates');
 
+Route::get('/rangepick', 'CertificatesController@rangepick')->name('rangepicker');
+

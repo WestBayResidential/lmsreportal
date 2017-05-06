@@ -57,10 +57,10 @@ return [
         'mysql_mdl' => [
             'driver' => 'mysql',
             'host' => env('MDL_DB_HOST', '127.0.0.1'),
-            'port' => env('MDL_DB_PORT', '3306'),
-            'database' => env('MDL_DB_DATABASE', 'moodle26'),
+            'port' => env('MDL_DB_PORT', '1234'),
+            'database' => env('MDL_DB_DATABASE', 'moodle_26'),
             'username' => env('MDL_DB_USERNAME', 'root'),
-            'password' => env('MDL_DB_PASSWORD', 'N3div999!'),
+            'password' => env('MDL_DB_PASSWORD', 'root'),
             'unix_socket' => env('MDL_DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

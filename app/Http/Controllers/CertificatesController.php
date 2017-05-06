@@ -19,11 +19,18 @@ class CertificatesController extends Controller
                      'name')
             ->join('user', 'certificate_issues.userid', '=', 'user.id')
             ->join('certificate', 'certificate_issues.certificateid', '=', 'certificate.id')
-            ->where([ ['userid', '>', '5'], ['userid', '<', '100'] ])
+            ->where([ ['certificate_issues.timecreated', '>', '1483232400'] ])
             ->get();
     
         return view('certificates.certlist', compact('certs'));
         //return $certs;
+    }
+
+    public function rangepick()
+    {
+
+        return view('certificates.rangepick');
+    
     }
 
 }

@@ -8,7 +8,7 @@
                 <div class="panel-heading">Select a Report...</div>
 
                 <div class="panel-body">
-                    <a href="{{ route('certificates') }}">Certificates Listing</a>
+                    <a href="{{ route('rangepicker') }}">Specify date range for Certificates Report</a>
                 </div>
             </div>
         </div>
