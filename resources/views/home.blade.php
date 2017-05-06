@@ -8,7 +8,9 @@
                 <div class="panel-heading">Select a Report...</div>
 
                 <div class="panel-body">
-                    <a href="{{ route('rangepicker') }}">Specify date range for Certificates Report</a>
+                    <div>Specify a range of dates to report awarded certificates, then click the GO link</div>
+                    <div><input type="text" name="daterange" value="01/01/2015 - 01/31/2015" /> </div>
+                    <a href="{{ route('certificates') }}">Go Report</a>
                 </div>
             </div>
         </div>
