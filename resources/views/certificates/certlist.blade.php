@@ -5,7 +5,8 @@
       <table class="table table-striped">
         <thead>
           <th>Name</th>
-          <th>User</th>
+          <th> </th>
+          <th>UserId</th>
           <th>Certificate</th>
           <th>Code</th>
           <th>Date Awarded</th>
@@ -14,6 +15,7 @@
         @foreach ($certs as $cert)
           <tr>
           <td>{{ $cert->lastname }}</td>
+          <td>{{ $cert->firstname }}</td>
           <td>{{ $cert->userid }}</td>
           <td>{{ $cert->name }}</td>
           <td>{{ $cert->code }}</td>
