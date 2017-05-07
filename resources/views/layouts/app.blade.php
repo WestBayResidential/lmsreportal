@@ -7,14 +7,15 @@
 
     <!-- Include Required Prerequisites -->
     <!-- Bootstrap Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" >
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
-     <!-- Moment -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- Moment -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <!-- Include date range picker -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>   
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" >    
     <!-- Other Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -32,11 +33,6 @@
         ]) !!};
     </script>
 
-    <script type="text/javascript">
-        $(function() {
-            $('input[name="daterange"]').daterangepicker();
-        });
-    </script>
 
 
 </head>
@@ -101,7 +97,8 @@
         @yield('content')
     </div>
 
-    <!-- Scripts -->
+    <!-- Scripts
     <script src="{{ asset('js/app.js') }}"></script>
+     -->
 </body>
 </html>

@@ -8,9 +8,17 @@
                 <div class="panel-heading">Select a Report...</div>
 
                 <div class="panel-body">
-                    <div>Specify a range of dates to report awarded certificates, then click the GO link</div>
-                    <div><input type="text" name="daterange" value="01/01/2015 - 01/31/2015" /> </div>
-                    <a href="{{ route('certificates') }}">Go Report</a>
+                   <form id="certdates" method="GET" action="{{ route('certificates') }}" >
+                    <div>Specify a range of dates to report awarded certificates, then click the GO button</div>
+                    <div><input class="datefield" type="text" name="daterange" value="01/01/2017 - 03/31/2017"  size=25 />
+                        <script type="text/javascript">
+                            $(function() {
+                                $('input[name="daterange"]').daterangepicker();
+                            });
+                        </script>
+                    </div>
+                    <button type="submit" href="{{ route('certificates') }}">Go Report</a>
+                  </form>
                 </div>
             </div>
         </div>
