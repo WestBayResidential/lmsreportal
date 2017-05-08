@@ -28,7 +28,7 @@ class CertificatesController extends Controller
 
         $certs = DB::connection('mysql_mdl')->table('certificate_issues')
             ->select('certificate_issues.id', 
-                     'userid', 
+                     'certificate_issues.userid', 
                      'certificateid', 
                      'code', 
                      DB::raw('from_unixtime(`mdl_certificate_issues`.`timecreated`) as award'),
@@ -36,10 +36,10 @@ class CertificatesController extends Controller
                      'firstname',
                      'data',
                      'name')
-            ->join('user_info_data', 'certificate_issues_userid', '=', 'user_info_data.userid')
+            ->join('user_info_data', 'certificate_issues.userid', '=', 'user_info_data.userid')
             ->join('user', 'certificate_issues.userid', '=', 'user.id')
             ->join('certificate', 'certificate_issues.certificateid', '=', 'certificate.id')
-            ->where('user_info_data.fieldid', '=', '6')
+            ->where('user_info_data.fieldid', '=', '7')
             ->wherebetween('certificate_issues.timecreated', [$start_uxtime, $end_uxtime] )
             ->get();
     

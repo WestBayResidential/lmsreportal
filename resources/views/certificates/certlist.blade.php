@@ -7,7 +7,6 @@
           <th>Name</th>
           <th> </th>
           <th>Location</th>
-          <th>UserId</th>
           <th>Certificate</th>
           <th>Code</th>
           <th>Date Awarded</th>
@@ -18,7 +17,6 @@
           <td>{{ $cert->lastname }}</td>
           <td>{{ $cert->firstname }}</td>
           <td>{{ $cert->data }}</td>
-          <td>{{ $cert->userid }}</td>
           <td>{{ $cert->name }}</td>
           <td>{{ $cert->code }}</td>
           <td>{{ $cert->award }}</td>
