@@ -5,13 +5,37 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Acme\Repos\CertRepoInterface;
+
+
 
 class CertificatesController extends Controller
 {
+    protected $certRepo;
+
+    function __construct(CertRepoInterface $certRepo)
+    {
+        $this->certRepo = $certRepo;
+    
+    
+    }
+
+
+    public function index()
+    {
+        $certawards = $this->certRepo->getPaginated();
+
+        return View::make("certawards.index", compact("certawards"));
+    
+    
+    }
+
+
+
+
+
     public function select()
     {
-
-        //dd(request()->all());
 
         $period = request("daterange");
         $startperiod = substr($period, 0, 10);
