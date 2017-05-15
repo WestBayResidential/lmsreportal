@@ -1,7 +1,9 @@
 <?php namespace Acme\Repos;
 
+use Acme\Certificate;
 
-class DbCertRepo implements CertRepoInterfact {
+
+class DbCertRepo implements CertRepoInterface {
     
     public function getPaginated()
     {
