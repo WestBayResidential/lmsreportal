@@ -4,14 +4,14 @@
 <div class="col-md-6">
       <table class="table table-striped">
         <thead>
-          <th>Name</th>
+          <th><a href='{{ route( 'certificates' ) }}?daterange={{ $dr }}'>Name</a></th>
           <th> </th>
-          <th>Location</th>
+          <th><a href='{{ route( 'certbyloc' ) }}?daterange={{ $dr }}'>Location</a></th>
           <th>Certificate</th>
           <th>Code</th>
-          <th>Date Awarded</th>
+          <th><a href='{{ route( 'certbydate' ) }}?daterange={{ $dr }}'>Date Awarded</a></th>
         </thead>
-      <tbody>
+        <tbody>
         @foreach ($certs as $cert)
           <tr>
           <td>{{ $cert->lastname }}</td>
