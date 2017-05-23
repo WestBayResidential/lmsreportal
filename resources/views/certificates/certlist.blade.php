@@ -7,7 +7,7 @@
           <th><a href='{{ route( 'certificates' ) }}?daterange={{ $dr }}'>Name</a></th>
           <th> </th>
           <th><a href='{{ route( 'certbyloc' ) }}?daterange={{ $dr }}'>Location</a></th>
-          <th>Certificate</th>
+          <th><a href='{{ route( 'certbyname' ) }}?daterange={{ $dr }}'>Certificate</a></th>
           <th>Code</th>
           <th><a href='{{ route( 'certbydate' ) }}?daterange={{ $dr }}'>Date Awarded</a></th>
         </thead>

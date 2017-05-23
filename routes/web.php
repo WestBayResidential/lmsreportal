@@ -26,3 +26,6 @@ Route::get('/certificatesbylocation', 'CertificatesController@selectSortByLocati
 
 Route::get('/certificatesbydate', 'CertificatesController@selectSortByDate')->name('certbydate');
 
+Route::get('/certificatesbyname', 'CertificatesController@selectSortByCertname')->name('certbyname');
+
+
