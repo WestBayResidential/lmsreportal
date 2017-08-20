@@ -58,7 +58,7 @@ return [
             'driver' => 'mysql',
             'host' => env('MDL_DB_HOST', '127.0.0.1'),
             'port' => env('MDL_DB_PORT', '1234'),
-            'database' => env('MDL_DB_DATABASE', 'moodle_26'),
+            'database' => env('MDL_DB_DATABASE', 'moodle'),
             'username' => env('MDL_DB_USERNAME', 'root'),
             'password' => env('MDL_DB_PASSWORD', 'root'),
             'unix_socket' => env('MDL_DB_SOCKET', ''),
