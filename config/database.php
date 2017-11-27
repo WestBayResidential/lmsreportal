@@ -29,6 +29,11 @@ return [
     | so make sure you have the driver for your particular database of
     | choice installed on your machine before you begin development.
     |
+    | Databases defined as:
+    |  - mysql_mdl: current, active Moodle datastore
+    |  - mysql_arch: archived Moodle datastore from legacy LMS as of
+    |                November 1, 2017
+    |
     */
 
     'connections' => [
@@ -62,6 +67,21 @@ return [
             'username' => env('MDL_DB_USERNAME', 'root'),
             'password' => env('MDL_DB_PASSWORD', 'root'),
             'unix_socket' => env('MDL_DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => 'mdl_',
+            'strict' => true,
+            'engine' => null,
+        ],
+
+        'mysql_arch' => [
+            'driver' => 'mysql',
+            'host' => env('ARCH_DB_HOST', '127.0.0.1'),
+            'port' => env('ARCH_DB_PORT', '1235'),
+            'database' => env('ARCH_DB_DATABASE', 'moodle_archive20171101'),
+            'username' => env('ARCH_DB_USERNAME', 'root'),
+            'password' => env('ARCH_DB_PASSWORD', 'root'),
+            'unix_socket' => env('ARCH_DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => 'mdl_',
