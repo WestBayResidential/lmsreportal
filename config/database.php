@@ -76,11 +76,11 @@ return [
 
         'mysql_arch' => [
             'driver' => 'mysql',
-            'host' => env('ARCH_DB_HOST', '127.0.0.1'),
-            'port' => env('ARCH_DB_PORT', '1235'),
+            'host' => env('ARCH_DB_HOST', 'wblmsdev.westbayri.org'),
+            'port' => env('ARCH_DB_PORT', '3306'),
             'database' => env('ARCH_DB_DATABASE', 'moodle_archive20171101'),
-            'username' => env('ARCH_DB_USERNAME', 'root'),
-            'password' => env('ARCH_DB_PASSWORD', 'root'),
+            'username' => env('ARCH_DB_USERNAME', 'certz'),
+            'password' => env('ARCH_DB_PASSWORD', 'N3div4614145!!'),
             'unix_socket' => env('ARCH_DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
