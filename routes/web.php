@@ -19,7 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-//Route::get('/certificates', 'CertificatesController@select')->name('certificates');
 Route::get('/certificates', 'CertificatesController@selectSortByName')->name('certificates');
 
 Route::get('/certificatesbylocation', 'CertificatesController@selectSortByLocation')->name('certbyloc');
@@ -28,4 +27,5 @@ Route::get('/certificatesbydate', 'CertificatesController@selectSortByDate')->na
 
 Route::get('/certificatesbyname', 'CertificatesController@selectSortByCertname')->name('certbyname');
 
+Route::get('/certzarch', 'CertzArchController@selectByCourse')->name('certzbycourse');
 
