@@ -52,4 +52,24 @@ Once attached to the standing TMUX session, the tunnel can be
 
 ```ssh prodwblms.mdltunnel```
 
+# CertzArchive Application
 
+Adding an application that supports the retrieval of PDF images of earned
+course certificates that accumulated on the legacy WB LMS (hosted on _fedora01_
+from 2010 to 2017). 
+
+A tar file of the `/opt/moodledata/` directories that specifically contained
+the certificate PDF files was compiled on 01-Nov-2017, then relocated to
+an Augury _WBLMS development server_ in DO. At the same time, a snapshot dump
+of the entire Moodle database from the legacy platform was exported, then
+imported into the MySQL instance on the same Augury development server.
+
+## Development Notes
+### 27-Nov-2017
+* Application development will be done as an extension of the *LMSReportal*
+  app
+* Application name is *CertzArchive*
+* Database entry created in /config/database.php, along with credentials for
+  user 'certzarch'
+* Initial route created in /routes/web.php to list certificates
+* Empty controller created in app/Controllers/CertzArchController.php
