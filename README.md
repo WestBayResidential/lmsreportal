@@ -37,6 +37,27 @@ The configuration details specifying database connectivity are specified in:
 
 ```/home/forge/default/config/database.php```
 
+You also need to be aware that the configured parameters for the database may
+be overriden by environment variable that appear to take precendence. The
+environment variables are:
+
+```
+MDL_DB_CONNECTION=mysql_mdl
+MDL_DB_HOST=127.0.0.1
+MDL_DB_PORT=3306
+MDL_DB_DATABASE=moodle26
+MDL_DB_USERNAME=homestead
+MDL_DB_PASSWORD=secret
+```
+
+These are just examples. In general, the values specified in the _.env_ file
+are not retained in the repo, and are used to modify values in a particular
+envrironment. Either remove these values from the file _.ent_, or make sure
+that they agree with the values found in the database config file in
+_config/database.php_
+
+
+
 ### Production Database
 
 The connection is hosted over a standing ssh tunnel that is maintained in
